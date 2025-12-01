@@ -23,6 +23,8 @@ public class login {
                         By.xpath("//button[normalize-space() = 'Continue' or contains(., 'Continue') or @id='continue' or @name='continue']")));
         continueBtn.click();
         System.out.println("Clicked Continue button");
+        System.out.println("Login process initiated.");
+        System.out.println("Please complete any further steps manually if required.");
 
     }
 }
