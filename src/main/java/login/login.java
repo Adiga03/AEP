@@ -16,8 +16,6 @@ import java.time.Duration;
 
 public class login {
     public static void main(String[] args) throws InterruptedException, IOException {
-
-
         //WebDriver driver = new ChromeDriver(options);
         WebDriver driver = new ChromeDriver();
        // driver.manage().deleteAllCookies();
@@ -27,7 +25,7 @@ public class login {
    driver.manage().window().maximize();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement emailInput = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@type='email'])[1]")));
-        emailInput.sendKeys("Padiga@dollargeneral.com");
+        emailInput.sendKeys("");
 
         WebElement continueBtn = wait.until(
                 ExpectedConditions.elementToBeClickable(
@@ -42,10 +40,10 @@ public class login {
        // WebElement loginid = wait.until(
              //   ExpectedConditions.elementToBeClickable(
                 //        By.xpath("//input[@name='Username']")));
-       // loginid.sendKeys("padiga@dollargeneral.com");
-        //driver.findElement(By.xpath("//input[@name='Username']")).sendKeys("padiga@dollargeneral.com");
-        //driver.findElement(By.xpath("//input[@name='Initials']")).sendKeys("pa");
-        //driver.findElement(By.xpath("//input[@name='Password']")).sendKeys("9adI@T95");
+       // loginid.sendKeys("");
+        //driver.findElement(By.xpath("//input[@name='Username']")).sendKeys("");
+        //driver.findElement(By.xpath("//input[@name='Initials']")).sendKeys("");
+        //driver.findElement(By.xpath("//input[@name='Password']")).sendKeys("");
        // driver.findElement(By.xpath("//input[@type='submit']")).click();
         System.out.println("sso page");
         Thread.sleep(40000);
@@ -100,13 +98,9 @@ System.out.println("waited for 40 seconds");
 WebElement drag=driver.findElement(By.xpath("//div[@class='SqlEditor__dragBorder__91_JY']"));
 Actions actions = new Actions(driver);
 actions.dragAndDropBy(drag, 0, -100).perform();
-
 WebElement queryvalue= driver.findElement(By.xpath("//td[2]"));
 String results=queryvalue.getText();
 System.out.println("Query Result: " + results);
-
-
-
     }
 }
 
